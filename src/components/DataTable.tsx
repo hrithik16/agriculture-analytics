@@ -22,8 +22,8 @@ const DataTable: React.FC = () => {
   const averages = calculateAverage(data);
 
   return ( <div>
-    <ResultTable data={aggregates} headings={["year", "Max Crop", "Min Crop"]} table='aggregate'/>
-    <ResultTable data={averages} headings={["crop", "Max Crop", "Min Crop"]} table='average'/>
+    <ResultTable data={aggregates} headings={["year", "Max Crop", "Min Crop"]} table='Aggregate'/>
+    <ResultTable data={averages} headings={["crop", "Max Crop", "Min Crop"]} table='Average'/>
     </div>);
 };
 

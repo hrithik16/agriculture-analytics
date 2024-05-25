@@ -4,25 +4,25 @@ import { Table } from "@mantine/core";
 interface Props {
   data: any[];
   headings: string[];
-  table: "average" | "aggregate";
+  table: "Average" | "Aggregate";
 }
 const ResultTable: React.FC<Props> = ({ data, headings, table }) => {
-  
+
   const rows = data.map((element, index) => (
     <Table.Tr key={index}>
-      <Table.Td>{table === "aggregate" ? element.year : element.crop}</Table.Td>
+      <Table.Td>{table === "Aggregate" ? element.year : element.crop}</Table.Td>
       <Table.Td>
-        {table === "aggregate" ? element.maxCrop : element.avgYield.toFixed(3)}
+        {table === "Aggregate" ? element.maxCrop : element.avgYield.toFixed(3)}
       </Table.Td>
       <Table.Td>
-        {table === "aggregate" ? element.minCrop : element.avgArea.toFixed(3)}
+        {table === "Aggregate" ? element.minCrop : element.avgArea.toFixed(3)}
       </Table.Td>
     </Table.Tr>
   ));
 
   return (
     <div>
-      <h2>Data Table</h2>
+      <h2>{table} Data Table</h2>
       <Table highlightOnHover withColumnBorders>
         <Table.Thead>
           <Table.Tr>
